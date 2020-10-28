@@ -1,0 +1,23 @@
+root
+2n3904
+
+#Para crear la aplicacion
+python manage.py startapp polls
+
+#Para hacer las bases de datos
+python manage.py migrate
+
+#Para correr el servidor
+python manage.py runserver
+
+usuario admin:
+pass:admin
+
+#views van las vistas
+
+#urls van las rutas
+
+Seguir viendo estas para desarrollar
+https://docs.djangoproject.com/es/3.0/topics/db/models/
+https://docs.djangoproject.com/es/3.0/topics/db/examples/many_to_one/
+https://docs.djangoproject.com/es/3.0/topics/
