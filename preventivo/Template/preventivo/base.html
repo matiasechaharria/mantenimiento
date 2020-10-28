@@ -1,0 +1,20 @@
+<html>
+    {# incluye el encabezado #}
+    {% include "encabezado.html" %}
+    {% include "barra.html" %}
+    <head>
+      <title>
+          {% block title %}
+          {% endblock%}
+      </title>
+    </head>
+
+    <body>
+
+      {% block content %}
+      {% endblock%}
+
+    </body>
+    {% include "piedepagina.html" %}
+
+  </html>

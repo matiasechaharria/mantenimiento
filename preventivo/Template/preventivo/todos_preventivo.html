@@ -1,0 +1,57 @@
+  {% extends "base.html" %}
+  {% block title %}
+     Preventivo
+    {% endblock %}
+
+
+    {% block content %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.temperatura{}
+.velocidad{}
+.impresion{}
+
+</style>
+<div class="Preventivo">
+<h2>Preventivos</h2>
+  <table>
+    <tr>
+        <th>utn</th>
+        <th>preventivo</th>
+        <th>fecha</th>
+        <th>nombre</th>
+        <th>Servicio </th>
+        <th>Departamento </th>
+        <th>Instituto</th>
+    </tr>
+    {% for prev in preventivos%}
+      <tr>
+        <th>{{prev.equipo.id}}</th>
+        <th>{{prev.preventivo}}</th>
+        <th>{{prev.fecha}}</th>
+        <th>{{prev.equipo.nombre}}</th>
+        <th>{{prev.equipo.servicio}}</th>
+        <th>{{prev.equipo.servicio.departamento}}</th>
+        <th>{{prev.equipo.servicio.departamento.instituto}}</th>
+
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+    {% endblock%}
+

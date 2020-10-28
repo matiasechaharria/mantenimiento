@@ -1,0 +1,56 @@
+<html>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+</style>
+
+<head>
+  <title>Clientes </title>
+</head>
+
+<body>
+
+<div class="contactos">
+<h2>contactos</h2>
+  <table>
+    <tr>
+        <th>Servicio</th>
+        <th>Nombre</th>
+        <th>telefono</th>
+        <th>email</th>
+        <th>Departamento </th>
+        <th>Instituto</th>
+
+    </tr>
+    {% for cli in Contactos%}
+      <tr>
+        <th>{{cli.servicio}}</th>
+        <th>{{cli.nombre}}</th>
+        <th>{{cli.telefono}}</th>
+        <th>{{cli.email}}</th>
+        <th>{{cli.servicio.departamento}}</th>
+        <th>{{cli.servicio.departamento.instituto}}</th>
+
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>

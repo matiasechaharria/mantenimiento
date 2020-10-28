@@ -1,0 +1,48 @@
+<html>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+</style>
+
+<head>
+  <title>Clientes </title>
+</head>
+
+<body>
+
+<div class="clientes">
+  <h2>clientes</h2>
+  <table>
+    <tr>
+      <th>Instituto</th>
+      <th>Departamento </th>
+      <th>Servicio</th>
+    </tr>
+    {% for cli in cliente%}
+      <tr>
+        <th>{{cli.departamento.instituto}}</th>
+        <th>{{cli.departamento}}</th>
+        <th>{{cli.nombre}}</th>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>
