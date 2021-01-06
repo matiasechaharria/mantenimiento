@@ -10,6 +10,15 @@ from datetime import datetime
 from django.http import HttpResponse
 from .forms import PreventivoForm
 
+from django.views import generic
+
+class TodosPreventivos(generic.ListView):
+    model = Preventivo
+    preventivos = Preventivo.objects.all()
+    template_name = 'todos_preventivo.html'
+
+
+
 def Home(request):
     return render(request, 'todos_preventivo.html')
 
@@ -36,4 +45,3 @@ def Consulta(request):
 
     todo = Preventivo.objects.all()
     return render(request, 'todos_preventivo.html', {'preventivos': todo})
-

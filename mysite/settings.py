@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'rest_framework',
     'preventivo.apps.PreventivoConfig',
     'mantenimiento.apps.MantenimientoConfig',
     'polls.apps.PollsConfig',
@@ -59,7 +61,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/mantenimiento/Template/mantenimiento/',
-                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/preventivo/Template/preventivo'],
+                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/preventivo/Template/preventivo',
+
+                 ],
 
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,3 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
