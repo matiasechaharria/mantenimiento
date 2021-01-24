@@ -51,6 +51,7 @@ class Equipo (models.Model):
     """
     servicio= models.ForeignKey('Servicio', on_delete=models.CASCADE)
     tipoEquipo = models.ForeignKey('TipoEquipo', on_delete=models.CASCADE)
+    img= models.ImageField(null=True, default=None, upload_to = "imagenes")
     marca = models.ForeignKey('Marca', on_delete=models.CASCADE)
     #sector= models.ForeignKey('Sector', on_delete=models.CASCADE)
 
