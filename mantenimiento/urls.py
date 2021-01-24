@@ -6,6 +6,7 @@ from django.urls import include, path
 from rest_framework import routers
 from . import views
 
+
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
@@ -17,6 +18,7 @@ urlpatterns = [
     path('1', views.home, name='home'),
     path('home', views.home, name='home'),
     path('cliente', views.Clientes, name='cliente'),
+    path('form',views.Contactof,name='Contactof'),
     path('contactos', views.Contactos, name='contactos'),
 
 ]

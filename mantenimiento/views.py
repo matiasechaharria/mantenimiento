@@ -3,6 +3,7 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Instituto,Departamento,Servicio,Sector, Contacto
+from .forms import ContactoForm
 # Create your views here.
 
 from django.http import HttpResponse
@@ -11,7 +12,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html")
 
 def Clientes(request):
     """
@@ -30,7 +31,10 @@ def Contactos(request):
     Contactos = Contacto.objects.all()
     return render(request, 'contactos.html', {'Contactos':Contactos})
 
-
+def Contactof(request):
+    form=ContactoForm()
+    context ={'form':form}
+    return render(request, 'form_generica.html',context)
 
 #django rest framework
 from django.contrib.auth.models import User, Group

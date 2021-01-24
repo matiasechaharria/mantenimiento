@@ -62,6 +62,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/mantenimiento/Template/mantenimiento/',
                  '/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/preventivo/Template/preventivo',
+                 '/home/pi/Desktop/Projectos/Django/mantenimiento/mantenimiento/mantenimiento/Template/mantenimiento',
 
                  ],
 
