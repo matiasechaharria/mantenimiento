@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["localhost","192.168.0.24"]
 # Application definition
 
 INSTALLED_APPS = [
-
+    'notascomunicacion.apps.NotascomunicacionConfig',
     'rest_framework',
     'preventivo.apps.PreventivoConfig',
     'mantenimiento.apps.MantenimientoConfig',
