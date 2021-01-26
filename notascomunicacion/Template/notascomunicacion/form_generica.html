@@ -1,11 +1,15 @@
+<html>
 {% extends "base_generica.html"%}
 
 {% block content%}
   <p> formulario generico</p>
     <form action="" method="post">
     {% csrf_token %}
+
     {{ form.as_table }}
+
     <input type="submit" value="Submit">
     </form>
   <p>fin formulario generico</p>
 {%endblock%}
+</html>

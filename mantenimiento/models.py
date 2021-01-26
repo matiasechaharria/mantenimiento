@@ -119,10 +119,10 @@ class Contacto(models.Model):
         personas de contacto para los servicios
     """
     servicio = models.ForeignKey('Servicio', on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=30, unique=True)
-    telefono = models.CharField(max_length=30, unique=True)
+    nombre = models.CharField(max_length=30, unique=False)
+    telefono = models.CharField(max_length=30, unique=False)
     email = models.EmailField(max_length = 100,unique=True)
-    comentario = models.CharField(max_length=30, unique=True)
+    comentario = models.CharField(max_length=100, unique=False, blank=True)
 
 
     def __str__(self):

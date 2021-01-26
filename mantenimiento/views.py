@@ -32,12 +32,13 @@ def Contactos(request):
     return render(request, 'contactos.html', {'Contactos':Contactos})
 
 def Contactof(request):
+    """Formulario para cargar conactos en la base"""
     form=ContactoForm()
     if request.method=='POST':
         form=ContactoForm(request.POST)
         if form.is_valid():
             Contacto.objects.create(**form.cleaned_data)
-
+            Contactos(None)
     context ={'form':form}
     return render(request, 'form_generica.html',context)
 

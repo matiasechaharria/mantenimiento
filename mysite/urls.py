@@ -22,10 +22,10 @@ urlpatterns = [
     #path('login/', include('login.urls')),
     path('notas/', include('notascomunicacion.urls')),
     path('', include('mantenimiento.urls')),
-    path('preventivo/', include('preventivo.urls')),
+#    path('preventivo/', include('preventivo.urls')),
     path('mantenimiento/', include('mantenimiento.urls')),
-    path('utn/', include('utn.urls')),
-    path('polls/', include('polls.urls')),
+    #path('utn/', include('utn.urls')),
+    #path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 
 ]

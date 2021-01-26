@@ -16,6 +16,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+{% include "home.html"%}
 
 
 </style>
@@ -30,23 +31,23 @@ tr:nth-child(even) {
 <h2>contactos</h2>
   <table>
     <tr>
-        <th>Servicio</th>
-        <th>Nombre</th>
-        <th>telefono</th>
-        <th>email</th>
-        <th>Departamento </th>
-        <th>Instituto</th>
-        <th>Comentario</th>
+      <th>Instituto</th>
+      <th>Departamento </th>
+      <th>Servicio</th>
+      <th>Nombre</th>
+      <th>telefono</th>
+      <th>email</th>
+      <th>Comentario</th>
 
     </tr>
     {% for cli in Contactos%}
       <tr>
+        <th>{{cli.servicio.departamento.instituto}}</th>
+        <th>{{cli.servicio.departamento}}</th>
         <th>{{cli.servicio}}</th>
         <th>{{cli.nombre}}</th>
         <th>{{cli.telefono}}</th>
         <th>{{cli.email}}</th>
-        <th>{{cli.servicio.departamento}}</th>
-        <th>{{cli.servicio.departamento.instituto}}</th>
         <th>{{cli.comentario}}</th>
 
       </tr>
