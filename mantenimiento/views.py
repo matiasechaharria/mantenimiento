@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework.renderers import TemplateHTMLRenderer
+from django.http import HttpResponseRedirect
+
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Instituto,Departamento,Servicio,Sector, Contacto
@@ -38,7 +40,8 @@ def Contactof(request):
         form=ContactoForm(request.POST)
         if form.is_valid():
             Contacto.objects.create(**form.cleaned_data)
-            Contactos(None)
+            return HttpResponseRedirect('/mantenimiento/LContacto')
+
     context ={'form':form}
     return render(request, 'form_generica.html',context)
 
