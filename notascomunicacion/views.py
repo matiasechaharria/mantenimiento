@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import NotaComunicacionForm
 from .models import NotaComunicacion
 from django.http import HttpResponseRedirect
-
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def SubirNota(request):
@@ -10,10 +10,11 @@ def SubirNota(request):
 
     if request.method=='POST':
         form=NotaComunicacionForm(request.POST, request.FILES)
-        print(form)
+        #print(form)
         if form.is_valid():
             print(form.cleaned_data)
             NotaComunicacion.objects.create(**form.cleaned_data)
+
         else:
             print("no es valid")
             print(form.errors)

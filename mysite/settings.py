@@ -61,8 +61,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/Documents/Proyectos/Django/sistema_mantenimiento/mantenimiento/notascomunicacion/Template/notascomunicacion',
-                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/Documents/Proyectos/Django/sistema_mantenimiento/mantenimiento/mantenimiento/Template/mantenimiento',
+                 os.path.join(BASE_DIR,'notascomunicacion/Template/notascomunicacion'),
+                 os.path.join(BASE_DIR,'mantenimiento/Template/mantenimiento'),
+
 
                  ],
 
@@ -130,6 +131,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = os.path.join(BASE_DIR,'/media/')
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
