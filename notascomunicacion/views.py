@@ -21,3 +21,8 @@ def SubirNota(request):
 
     context={'form':form}
     return render(request, 'form_generica.html',context)
+
+def MostrarNotas(request):
+    notas= NotaComunicacion.objects.all()
+    context={"notas":notas}
+    return render(request,'listNotasComunicacion.html',context)

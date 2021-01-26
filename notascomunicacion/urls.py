@@ -3,5 +3,6 @@ from rest_framework import routers
 from . import views
 
 urlpatterns = [
-    path('subirnota',views.SubirNota),
+    path('subirnota',views.SubirNota,name='subirnota'),
+    path('listNotas',views.MostrarNotas, name='MostrarNotas'),
 ]
