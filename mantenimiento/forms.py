@@ -7,7 +7,7 @@ class LogInForm(forms.Form):
     usuario = forms.CharField(max_length=100)
     password = forms.CharField(widget=forms.PasswordInput(), max_length=100)
 
-class ContactoForm(ModelForm):
+class ContactoForm(forms.ModelForm):
     class Meta:
         model = Contacto
         fields = '__all__'

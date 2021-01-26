@@ -25,7 +25,7 @@ SECRET_KEY = 'su%01&7pl(r3azxtwr9!1qqp+_8%1pc1x5d!&$9m0rnv-=m4vn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","192.168.0.24"]
+ALLOWED_HOSTS = ["localhost","192.168.0.24","127.0.0.1"]
 
 
 # Application definition
@@ -62,7 +62,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/mantenimiento/Template/mantenimiento/',
                  '/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/preventivo/Template/preventivo',
-                 '/home/pi/Desktop/Projectos/Django/mantenimiento/mantenimiento/mantenimiento/Template/mantenimiento',
+                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/Documents/Proyectos/Django/sistema_mantenimiento/mantenimiento/notascomunicacion/Template/notascomunicacion',
 
                  ],
 
