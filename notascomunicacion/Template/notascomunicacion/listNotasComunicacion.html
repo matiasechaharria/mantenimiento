@@ -1,0 +1,33 @@
+<html>
+{% extends "base_generica.html"%}
+
+{% block content%}
+  <h2>Muestra las Notas Cargadas</h2>
+  <a href="{% url 'subirnota' %}" >Subirnota  </a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Asuno</th>
+        <th>Resumen</th>
+        <th>Archivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for nota in notas %}
+      <tr>
+        <td>{{nota.asunto}}</td>
+        <td>{{nota.resumen}}</td>
+        <td>
+          <a href="{{nota.file}}" class="btn btn-primary btn-smt" target="_blank">
+            {{nota.file}}
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{%endblock%}
+</html>
