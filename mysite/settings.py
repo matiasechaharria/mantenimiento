@@ -60,9 +60,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/mantenimiento/Template/mantenimiento/',
-                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/My Documents/Proyectos/Django/Sistema_Malbran/env/mysite/preventivo/Template/preventivo',
+        'DIRS': [
                  '/media/matias/04EADFA0EADF8BF41/Users/Matias/Documents/Proyectos/Django/sistema_mantenimiento/mantenimiento/notascomunicacion/Template/notascomunicacion',
+                 '/media/matias/04EADFA0EADF8BF41/Users/Matias/Documents/Proyectos/Django/sistema_mantenimiento/mantenimiento/mantenimiento/Template/mantenimiento',
 
                  ],
 

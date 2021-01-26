@@ -54,9 +54,7 @@ class Equipo (models.Model):
     img= models.ImageField(null=True, default=None, upload_to = "imagenes")
     marca = models.ForeignKey('Marca', on_delete=models.CASCADE)
     #sector= models.ForeignKey('Sector', on_delete=models.CASCADE)
-
-
-    #estado_tecnico = models.ForeignKey('EstadoTecnico', on_delete=models.CASCADE)
+#estado_tecnico = models.ForeignKey('EstadoTecnico', on_delete=models.CASCADE)
 
     nombre = models.CharField(verbose_name='nombre', max_length=30)
     numero_de_serie = models.CharField(verbose_name='numero de serie', max_length=30, unique=True)
@@ -124,6 +122,7 @@ class Contacto(models.Model):
     nombre = models.CharField(max_length=30, unique=True)
     telefono = models.CharField(max_length=30, unique=True)
     email = models.EmailField(max_length = 100,unique=True)
+    comentario = models.CharField(max_length=30, unique=True)
 
 
     def __str__(self):

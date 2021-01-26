@@ -36,6 +36,7 @@ tr:nth-child(even) {
         <th>email</th>
         <th>Departamento </th>
         <th>Instituto</th>
+        <th>Comentario</th>
 
     </tr>
     {% for cli in Contactos%}
@@ -46,6 +47,7 @@ tr:nth-child(even) {
         <th>{{cli.email}}</th>
         <th>{{cli.servicio.departamento}}</th>
         <th>{{cli.servicio.departamento.instituto}}</th>
+        <th>{{cli.comentario}}</th>
 
       </tr>
     {% endfor %}

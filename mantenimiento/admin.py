@@ -30,7 +30,7 @@ class SectorAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'servicio']
     pass
 class ContactoAdmin(admin.ModelAdmin):
-    list_display = ['nombre', 'telefono','email','servicio']
+    list_display = ['nombre', 'telefono','email','servicio','comentario']
     list_filter = ['nombre','servicio']
 
     pass

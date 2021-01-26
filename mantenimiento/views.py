@@ -33,6 +33,11 @@ def Contactos(request):
 
 def Contactof(request):
     form=ContactoForm()
+    if request.method=='POST':
+        form=ContactoForm(request.POST)
+        if form.is_valid():
+            Contacto.objects.create(**form.cleaned_data)
+
     context ={'form':form}
     return render(request, 'form_generica.html',context)
 

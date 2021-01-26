@@ -18,7 +18,7 @@ urlpatterns = [
     path('1', views.home, name='home'),
     path('home', views.home, name='home'),
     path('cliente', views.Clientes, name='cliente'),
-    path('form',views.Contactof,name='Contactof'),
-    path('contactos', views.Contactos, name='contactos'),
+    path('AContacto',views.Contactof,name='AltaContacto'),
+    path('LContacto', views.Contactos, name='ListarContacto'),
 
 ]
