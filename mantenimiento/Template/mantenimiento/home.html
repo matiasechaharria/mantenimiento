@@ -26,13 +26,13 @@ tr:nth-child(even) {
 
 <body>
 <p>home page</p>
-<a href="http://127.0.0.1:8000/admin">Admin</a>
-<a href="http://127.0.0.1:8000/mantenimiento/cliente">lista de servicios</a>
-<a href="http://127.0.0.1:8000/mantenimiento/LContacto">Contacto</a>
-
 <a href="https://mail.anlis.gov.ar/">Zimbra Anlis</a>
-<a href="http://127.0.0.1:8000/preventivo/home">Preventivos</a>
-<a href="http://127.0.0.1:8000/correctivo">Correctivos</a>
+<a href="http://127.0.0.1:8000/admin" >Admin  </a>
+<a href="{% url 'cliente' %}" >lista de servicios  </a>
+<a href="{% url 'AltaContacto' %}" >Alta de contactos  </a>
+<a href="{% url 'ListarContacto' %}" >lista de contactos  </a>
+<a href="{% url 'listaProveedor' %}" >listado de proveedores </a>
+
 
 
 
