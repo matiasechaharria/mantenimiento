@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["localhost","192.168.0.24","127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    'proveedor.apps.ProveedorConfig',
     'notascomunicacion.apps.NotascomunicacionConfig',
     'rest_framework',
     'preventivo.apps.PreventivoConfig',
@@ -63,6 +64,7 @@ TEMPLATES = [
         'DIRS': [
                  os.path.join(BASE_DIR,'notascomunicacion/Template/notascomunicacion'),
                  os.path.join(BASE_DIR,'mantenimiento/Template/mantenimiento'),
+                 os.path.join(BASE_DIR,'proveedor/Template/proveedor'),
 
 
                  ],

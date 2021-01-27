@@ -1,0 +1,66 @@
+<html>
+{% extends "base_generica.html"%}
+
+</style>
+
+{% block content%}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+{% include "home.html"%}
+
+
+  <h2>Proveedores </h2>
+  <a href="{% url 'home' %}" >Home  </a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Rubro</th>
+        <th>Empresa</th>
+        <th>Página Web</th>
+        <th>direccion</th>
+        <th>telefono</th>
+        <th>interno</th>
+        <th>Horario</th>
+        <th>Comentario</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for proveedor in proveedores %}
+      <tr>
+        <td>{{proveedor.rubro.nombre}}</td>
+        <td>{{proveedor.empresa}}</td>
+        <td>
+          <a href="http://{{proveedor.website}}" class="btn btn-primary btn-smt" target="_blank">
+            {{proveedor.website}}
+          </a>
+        </td>
+        <td>{{proveedor.direccion}}</td>
+        <td>{{proveedor.telefono}}</td>
+        <td>{{proveedor.interno}}</td>
+        <td>{{proveedor.horario}}</td>
+        <td>{{proveedor.comentario}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{%endblock%}
+</html>

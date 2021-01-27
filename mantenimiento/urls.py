@@ -15,7 +15,7 @@ urlpatterns = [
     #path('', include(router.urls)),
 #    path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     #path('', views.home, name='home'),
-    path('1', views.home, name='home'),
+    path('', views.home, name='home'),
     path('home', views.home, name='home'),
     path('cliente', views.Clientes, name='cliente'),
     path('AContacto',views.Contactof,name='AltaContacto'),
