@@ -13,7 +13,8 @@ def SubirNota(request):
         #print(form)
         if form.is_valid():
             print(form.cleaned_data)
-            NotaComunicacion.objects.create(**form.cleaned_data)
+            #NotaComunicacion.objects.create(**form.cleaned_data)
+            form.save()
 
         else:
             print("no es valid")
