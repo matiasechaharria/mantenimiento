@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["localhost","192.168.0.33","172.10.0.98","127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    'SGC.apps.SgcConfig',
     'proveedor.apps.ProveedorConfig',
     'notascomunicacion.apps.NotascomunicacionConfig',
     'rest_framework',
