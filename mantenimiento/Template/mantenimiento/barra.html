@@ -1,0 +1,41 @@
+<html>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+</style>
+
+<head>
+  <title>Home </title>
+</head>
+
+<body>
+<p>home page</p>
+<a href="https://mail.anlis.gov.ar/">Zimbra Anlis</a>
+<a href="http:admin/" >Admin  </a>
+<a href="http://10.10.39.1" >SCADA  </a>
+<a href="{% url 'cliente' %}" >lista de servicios  </a>
+<a href="{% url 'AltaContacto' %}" >Alta de contactos  </a>
+<a href="{% url 'ListarContacto' %}" >lista de contactos  </a>
+<a href="{% url 'listaProveedor' %}" >listado de proveedores </a>
+
+
+
+
+</body>
+</html>
